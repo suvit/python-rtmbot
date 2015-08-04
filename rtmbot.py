@@ -60,8 +60,8 @@ class RtmBot(object):
                     if limiter == True:
                         time.sleep(.1)
                         limiter = False
-                    message = output[1].encode('ascii','ignore')
-                    channel.send_message("{}".format(message))
+                    #message = output[1].encode('ascii','ignore')
+                    channel.send_message(u"{}".format(output[1]))
                     limiter = True
     def crons(self):
         for plugin in self.bot_plugins:
